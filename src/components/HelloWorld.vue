@@ -10,7 +10,7 @@
 import { computed, ref, watchEffect, defineProps } from 'vue'
 /** 定义props */
 const props = defineProps({
-  msg: String,
+  msg: String
 })
 // 定义响应式数据 count
 const count = ref(0)
