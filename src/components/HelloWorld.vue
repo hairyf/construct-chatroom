@@ -8,6 +8,7 @@
 
 <script setup="props" lang="ts">
 import { computed, ref, watchEffect, defineProps } from 'vue'
+
 /** 定义props */
 const props = defineProps({
   msg: String
