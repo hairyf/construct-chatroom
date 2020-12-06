@@ -8,7 +8,6 @@
 import HelloWorld from './components/HelloWorld.vue'
 </script>
 <style lang="scss">
-.test {
-  font-size: rem(15);
-}
+@import './style/class.scss';
+@import 'vant/lib/index.css';
 </style>
