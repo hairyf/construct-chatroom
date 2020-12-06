@@ -16,7 +16,7 @@ const count = ref(0);
 const computedMsg = computed(()=> props.msg + "!!!!")
 // 定义抓取副作用
 watchEffect(()=>{
-  console.log(computedMsg.value)
+  console.log(computedMsg.value, '12321')
 })
-export default {}
+
 </script>
