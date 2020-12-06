@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@types/koa-router": "^7.4.1",
-    "koa": "^2.13.0",
     "koa-router": "^10.0.0",
     "vite": "^1.0.0-rc.13",
     "vue": "^3.0.4",
