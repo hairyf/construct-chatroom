@@ -9,7 +9,9 @@
   "dependencies": {
     "@types/koa-router": "^7.4.1",
     "axios": "^0.21.0",
+    "graphql": "^15.4.0",
     "koa-router": "^10.0.0",
+    "mongoose": "^5.11.4",
     "vite": "^1.0.0-rc.13",
     "vue": "^3.0.4",
     "vue-router": "^4.0.0-rc.6"

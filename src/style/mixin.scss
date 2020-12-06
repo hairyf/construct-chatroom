@@ -6,3 +6,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+@function rem($px) {
+  @return $px / 16rem
+}

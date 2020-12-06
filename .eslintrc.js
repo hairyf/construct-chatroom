@@ -1,17 +1,17 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
+    node: true
   },
   extends: [
     'plugin:vue/essential',
     'eslint:recommended',
     '@vue/typescript/recommended',
     '@vue/prettier',
-    '@vue/prettier/@typescript-eslint',
+    '@vue/prettier/@typescript-eslint'
   ],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2020
   },
   // 配置全局对象
   globals: {
@@ -19,7 +19,7 @@ module.exports = {
     wx: true,
     plus: true,
     getApp: true,
-    UniApp: true,
+    UniApp: true
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -51,6 +51,6 @@ module.exports = {
     // 允许函数不存在返回值
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'vue/no-multiple-template-root': 0,
-    '@typescript-eslint/no-unused-vars': 0,
-  },
+    '@typescript-eslint/no-unused-vars': 0
+  }
 }
