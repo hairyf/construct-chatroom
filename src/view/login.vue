@@ -10,23 +10,4 @@
   <span>login</span>
 </template>
 
-<script setup="props" lang="ts">
-import { useRoute, useRouter } from 'vue-router'
-// 当前路由
-const route = useRoute()
-console.log(route.path)
-console.log(route.params)
-// 当前路由器
-const router = useRouter()
-// router.back()
-// router.replace('/home')
-// router.push('/login')
-// 前置路由守卫
-router.beforeEach(() => {
-  console.log('--前置路由守卫--')
-})
-// 后置路由守卫
-router.afterEach(() => {
-  console.log('--后置路由守卫--')
-})
-</script>
+<script setup="props" lang="ts"></script>

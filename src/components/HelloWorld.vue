@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-06 13:50:07
- * @LastEditTime: 2020-12-08 00:10:59
+ * @LastEditTime: 2020-12-08 01:49:58
  * @Description: 
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
@@ -11,7 +11,7 @@
   <button @click="count++">count is: {{ count }}</button>
 </template>
 
-<script setup="props" lang="ts">
+<script setup lang="ts">
 import { computed, ref, watchEffect, defineProps } from 'vue'
 
 /** 定义props */
@@ -20,7 +20,7 @@ const props = defineProps({
 })
 // 定义响应式数据 count
 const count = ref(0)
-// 定义计算数学
+// 定义计算属性
 const computedMsg = computed(() => props.msg + '!!!!')
 // 定义抓取副作用
 watchEffect(() => {

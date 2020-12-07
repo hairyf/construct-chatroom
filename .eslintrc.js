@@ -1,3 +1,11 @@
+/*
+ * @Author: Mr.Mao
+ * @LastEditors: Mr.Mao
+ * @Date: 2020-12-06 15:00:02
+ * @LastEditTime: 2020-12-08 01:49:43
+ * @Description:
+ * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
+ */
 module.exports = {
   root: true,
   env: {
@@ -51,6 +59,8 @@ module.exports = {
     // 允许函数不存在返回值
     '@typescript-eslint/explicit-module-boundary-types': 0,
     'vue/no-multiple-template-root': 0,
-    '@typescript-eslint/no-unused-vars': 0
+    '@typescript-eslint/no-unused-vars': 0,
+    'no-unused-labels:': 0,
+    'no-undef': 0
   }
 }

@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-06 13:50:07
- * @LastEditTime: 2020-12-08 00:11:14
+ * @LastEditTime: 2020-12-08 01:34:09
  * @Description: 
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
@@ -24,6 +24,29 @@
 
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import { useRoute, useRouter } from 'vue-router'
+import { watchEffect } from 'vue'
+// 当前路由
+const route = useRoute()
+console.log(route.path)
+console.log(route.params)
+// 当前路由器
+const router = useRouter()
+// router.back()
+// router.replace('/home')
+// router.push('/login')
+// 前置路由守卫
+router.beforeEach(() => {
+  console.log('--前置路由守卫--')
+})
+// 后置路由守卫
+router.afterEach(() => {
+  console.log('--后置路由守卫--')
+})
+// 监听当前路由变化
+// watchEffect(() => {
+//   console.log(route)
+// })
 </script>
 <style lang="scss">
 @import './style/class.scss';
