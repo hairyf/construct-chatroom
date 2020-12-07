@@ -2,12 +2,13 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 09:02:16
- * @LastEditTime: 2020-12-07 17:15:48
+ * @LastEditTime: 2020-12-07 23:34:14
  * @Description: 后台应用出口
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
+import koajwt from 'koa-jwt'
 import router from './routes'
 import graphql from './graphql'
 import excepition from './exception'
@@ -17,6 +18,7 @@ const app = new Koa()
 app
   .use(excepition())
   .use(bodyParser())
+  .use(koajwt({ secret: 'rt-im-666' }).unless({ path: [/^\/login/] }))
   .use(router.routes())
   .use(router.allowedMethods())
   .use(graphql)
