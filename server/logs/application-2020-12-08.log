@@ -1,0 +1,89 @@
+[2020-12-08T00:39:31.448] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:23:22)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: 'Authentication Error'
+}
+[2020-12-08T00:39:38.568] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:23:22)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: 'Authentication Error'
+}
+[2020-12-08T00:43:21.856] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:23:22)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: 'Authentication Error'
+}
+[2020-12-08T00:43:50.770] [ERROR] application - ForbiddenError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:33:25
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-08T00:44:04.822] [ERROR] application - ForbiddenError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:33:25
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-08T00:45:10.903] [ERROR] application - JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:53:17)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:29:19
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-router\lib\router.js:372:16
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:34:12
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-router\lib\router.js:377:31)
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:26:14
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  name: 'JsonWebTokenError',
+  message: 'jwt must be provided'
+}
+[2020-12-08T00:51:54.600] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:23:22)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: 'Authentication Error'
+}
+[2020-12-08T00:51:59.837] [ERROR] application - ForbiddenError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:33:25
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-08T00:58:22.929] [ERROR] application - ForbiddenError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:34:25
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
