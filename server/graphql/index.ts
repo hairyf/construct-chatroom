@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 14:54:24
- * @LastEditTime: 2020-12-07 14:59:55
+ * @LastEditTime: 2020-12-08 11:14:31
  * @Description: graphql 出口
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -19,11 +19,12 @@ const root = {
     return 'Hello GraphQL World'
   }
 }
-export default mount(
-  '/graphql',
-  graphqlHTTP({
-    schema,
-    rootValue: root,
-    graphiql: false
-  })
-)
+export default () =>
+  mount(
+    '/graphql',
+    graphqlHTTP({
+      schema,
+      rootValue: root,
+      graphiql: false
+    })
+  )

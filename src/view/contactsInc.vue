@@ -10,4 +10,4 @@
   <span>contacts</span>
 </template>
 
-<script setup="props" lang="ts"></script>
+<script setup lang="ts"></script>
