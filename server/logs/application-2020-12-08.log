@@ -670,3 +670,43 @@
   },
   _message: 'user validation failed'
 }
+[2020-12-08T15:41:47.007] [ERROR] application - TokenExpiredError: jwt expired
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\项目\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\项目\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\项目\开源库管理\RT-IM-demo\server\routes\user.ts:35:23
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-router\lib\router.js:372:16
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-router\lib\router.js:377:31)
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:26:14
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at C:\项目\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  name: 'TokenExpiredError',
+  message: 'jwt expired',
+  expiredAt: 2020-12-08T04:45:56.000Z
+}
+[2020-12-08T15:58:41.364] [ERROR] application - TokenExpiredError: jwt expired
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\项目\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\项目\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\项目\开源库管理\RT-IM-demo\server\routes\user.ts:35:23
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-router\lib\router.js:372:16
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-router\lib\router.js:377:31)
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:26:14
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at C:\项目\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  name: 'TokenExpiredError',
+  message: 'jwt expired',
+  expiredAt: 2020-12-08T04:45:56.000Z
+}

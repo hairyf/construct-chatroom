@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 14:39:50
- * @LastEditTime: 2020-12-08 12:41:25
+ * @LastEditTime: 2020-12-08 16:02:16
  * @Description: 用户路由接口
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -14,6 +14,7 @@ import { UserModel } from '../db'
 import { SECRET } from '../config'
 const router = new Router()
 
+/** 进行注册 */
 router.post('/register', async (ctx) => {
   const body = ctx.request.body
   const findDoc = await UserModel.findOne({ username: body.username })
@@ -24,7 +25,7 @@ router.post('/register', async (ctx) => {
     token: jwt.sign({ _id: userInfo._id }, SECRET, { expiresIn: '1h' })
   })
 })
-
+/** 进行登录(token|账号密码) */
 router.get('/login', async (ctx) => {
   const query = ctx.query
   const headers = ctx.headers
@@ -50,4 +51,5 @@ router.get('/login', async (ctx) => {
     token: jwt.sign({ _id: userInfo._id }, SECRET, { expiresIn: '1h' })
   })
 })
+
 export default router
