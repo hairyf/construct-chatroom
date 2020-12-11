@@ -7,6 +7,6 @@
   white-space: nowrap;
 }
 
-@function rem($px) {
-  @return $px / 16rem
+@function px2rem($px) {
+  @return $px / (750 / 16rem);
 }

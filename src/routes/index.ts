@@ -30,7 +30,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     // 添加联系人
-    path: 'contactsInc',
+    path: '/contactsInc',
     component: () => import('../view/contactsInc.vue')
   },
   {

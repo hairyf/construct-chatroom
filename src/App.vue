@@ -7,54 +7,59 @@
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + V⚡ite" />
-  <p>
-    <!-- 使用 router-link 组件来导航. -->
-    <!-- 通过传入 `to` 属性指定链接. -->
-    <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
-    <router-link to="/home">Go to Foo</router-link>
-    |
-    <router-link to="/login">Go to Bar</router-link>
-  </p>
-  <!-- 路由出口 -->
-  <!-- 路由匹配到的组件将渲染在这里 -->
   <router-view></router-view>
+  <van-tabbar v-model="currentTabBarIndex" v-if="isLogin">
+    <van-tabbar-item
+      v-for="(item, index) in tabBarItems"
+      :key="index"
+      :icon="item.icon"
+      >{{ item.label }}</van-tabbar-item
+    >
+    <div
+      :style="{ left: currentTabBarIndex * 33.3333333333333333 + '%' }"
+      class="block"
+    />
+  </van-tabbar>
 </template>
 
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import { useRoute, useRouter } from 'vue-router'
-import { watchEffect } from 'vue'
-// 当前路由
-const route = useRoute()
-console.log(route.path)
-console.log(route.params)
-// 当前路由器
+import { ref, watchEffect } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import { useStore } from './store'
+const store = useStore()
 const router = useRouter()
-// router.back()
-// router.replace('/home')
-// router.push('/login')
-// 前置路由守卫
-router.beforeEach(() => {
-  console.log('--前置路由守卫--')
+const route = useRoute()
+const isLogin = store.getters.isLogin
+const tabBarItems = ref([
+  { icon: 'chat-o', label: '首页', path: '' },
+  { icon: 'friends-o', label: '联系人' },
+  { icon: 'contact', label: '个人中心' }
+])
+const currentTabBarIndex = ref(0)
+
+watchEffect(() => {
+  !isLogin.value && router.replace('/login')
 })
-// 后置路由守卫
-router.afterEach(() => {
-  console.log('--后置路由守卫--')
-})
-// 监听当前路由变化
-// watchEffect(() => {
-//   console.log(route)
-// })
 </script>
 <style lang="scss">
 @import './style/class.scss';
 @import 'vant/lib/index.css';
-#app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.van-tabbar {
+  .block {
+    position: absolute;
+    width: 33.3333333333333333%;
+    height: 100%;
+    background: #e4f2ff;
+    transition: 0.3s;
+    left: 0;
+  }
+  .van-tabbar-item {
+    position: relative;
+    z-index: 2;
+    transition: 0.3s;
+  }
+  .van-tabbar-item--active {
+    background: none;
+  }
 }
 </style>

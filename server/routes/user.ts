@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 14:39:50
- * @LastEditTime: 2020-12-08 16:02:16
+ * @LastEditTime: 2020-12-10 17:31:15
  * @Description: 用户路由接口
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -26,8 +26,8 @@ router.post('/register', async (ctx) => {
   })
 })
 /** 进行登录(token|账号密码) */
-router.get('/login', async (ctx) => {
-  const query = ctx.query
+router.post('/login', async (ctx) => {
+  const body = ctx.request.body
   const headers = ctx.headers
   // 这里判断是使用token解析的 _id 还是使用账号与密码
   let findDoc = null as null | Document
@@ -37,12 +37,12 @@ router.get('/login', async (ctx) => {
     if (!findDoc) return ctx.throw(403, '登录状态已过期')
   } else {
     const isEmpty = !(await UserModel.findOne({
-      username: query.username
+      username: body.username
     }))
     if (isEmpty) return ctx.throw(403, '该账号不存在')
     findDoc = await UserModel.findOne({
-      username: query.username,
-      password: query.password ? md5(query.password) : ''
+      username: body.username,
+      password: body.password ? md5(body.password) : ''
     })
     if (!findDoc) return ctx.throw(403, '账号密码不正确')
   }

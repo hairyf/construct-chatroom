@@ -7,6 +7,7 @@
     "serve": "nodemon server/app.ts"
   },
   "dependencies": {
+    "secure-ls": "^1.2.6",
     "vant": "^3.0.0-rc.2",
     "vite": "^1.0.0-rc.13",
     "vue": "^3.0.4",

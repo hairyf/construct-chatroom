@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-06 15:00:02
- * @LastEditTime: 2020-12-08 01:49:43
+ * @LastEditTime: 2020-12-10 16:55:38
  * @Description:
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -61,6 +61,7 @@ module.exports = {
     'vue/no-multiple-template-root': 0,
     '@typescript-eslint/no-unused-vars': 0,
     'no-unused-labels:': 0,
-    'no-undef': 0
+    'no-undef': 0,
+    'vue/no-v-model-argument': 0
   }
 }
