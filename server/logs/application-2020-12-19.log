@@ -1,0 +1,251 @@
+[2020-12-19T13:32:40.028] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (C:\项目\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at C:\项目\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: 'Authentication Error'
+}
+[2020-12-19T13:34:13.213] [ERROR] application - Error: user validation failed: gender: Path `gender` is invalid (男).
+    at ValidationError.inspect (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\error\validation.js:47:26)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\layouts.js:69:12)
+    at app (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\appenders\dateFile.js:30:19)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:13)
+    at Object.send (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:78:7)
+    at Logger._log (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:56:16)
+    at Logger.log (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:45:12) {
+  errors: {
+    gender: ValidatorError: Path `gender` is invalid (男).
+        at validate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'regexp',
+      path: 'gender',
+      value: '男',
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'user validation failed'
+}
+[2020-12-19T13:34:52.572] [ERROR] application - Error: user validation failed: gender: Path `gender` is invalid (男).
+    at ValidationError.inspect (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\error\validation.js:47:26)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\layouts.js:69:12)
+    at app (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\appenders\dateFile.js:30:19)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:13)
+    at Object.send (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:78:7)
+    at Logger._log (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:56:16)
+    at Logger.log (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:45:12) {
+  errors: {
+    gender: ValidatorError: Path `gender` is invalid (男).
+        at validate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'regexp',
+      path: 'gender',
+      value: '男',
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'user validation failed'
+}
+[2020-12-19T13:50:41.797] [ERROR] application - ForbiddenError: 该用户已存在
+    at Object.throw (C:\项目\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at C:\项目\开源库管理\RT-IM-demo\server\routes\user.ts:21:32
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at bodyParser (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at C:\项目\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该用户已存在'
+}
+[2020-12-19T13:51:26.028] [ERROR] application - Error: user validation failed: gender: Path `gender` is required., avatar: Path `avatar` is required., password: Path `password` is required.
+    at ValidationError.inspect (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\error\validation.js:47:26)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\layouts.js:69:12)
+    at app (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\appenders\dateFile.js:30:19)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:13)
+    at Object.send (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:78:7)
+    at Logger._log (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:56:16)
+    at Logger.log (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:45:12) {
+  errors: {
+    gender: ValidatorError: Path `gender` is required.
+        at validate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'gender',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    avatar: ValidatorError: Path `avatar` is required.
+        at validate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'avatar',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    password: ValidatorError: Path `password` is required.
+        at validate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'password',
+      value: null,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'user validation failed'
+}
+[2020-12-19T13:51:58.146] [ERROR] application - Error: user validation failed: gender: Path `gender` is required., avatar: Path `avatar` is required., password: Path `password` is required.
+    at ValidationError.inspect (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\error\validation.js:47:26)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\layouts.js:69:12)
+    at app (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\appenders\dateFile.js:30:19)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:41:21)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:13)
+    at Object.send (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:78:7)
+    at Logger._log (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:56:16)
+    at Logger.log (C:\项目\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:45:12) {
+  errors: {
+    gender: ValidatorError: Path `gender` is required.
+        at validate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'gender',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    avatar: ValidatorError: Path `avatar` is required.
+        at validate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'avatar',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    password: ValidatorError: Path `password` is required.
+        at validate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at C:\项目\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'password',
+      value: null,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'user validation failed'
+}
+[2020-12-19T14:14:59.408] [ERROR] application - ForbiddenError: 该账号不存在
+    at Object.throw (C:\项目\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at C:\项目\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at bodyParser (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at C:\项目\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-19T17:53:17.615] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (C:\项目\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at C:\项目\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: 'Authentication Error'
+}
+[2020-12-19T17:53:36.034] [ERROR] application - TokenExpiredError: jwt expired
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\项目\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\项目\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\项目\开源库管理\RT-IM-demo\server\routes\user.ts:35:23
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-router\lib\router.js:372:16
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-router\lib\router.js:377:31)
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at C:\项目\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:26:14
+    at dispatch (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (C:\项目\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at C:\项目\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  name: 'TokenExpiredError',
+  message: 'jwt expired',
+  expiredAt: 2020-12-08T04:45:56.000Z
+}

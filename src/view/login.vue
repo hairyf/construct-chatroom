@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 23:50:38
- * @LastEditTime: 2020-12-10 17:28:04
+ * @LastEditTime: 2020-12-19 13:47:11
  * @Description: 登录页面
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
@@ -58,21 +58,32 @@
     </van-cell-group>
   </main>
   <footer>
-    <van-button class="submit-btns" type="primary" round>{{
+    <van-button class="submit-btns" type="primary" round @click="onSubmit">{{
       '进行' + tabs[currentTab].text
     }}</van-button>
   </footer>
 </template>
 <script setup lang="ts">
+import { store } from '../store'
 import { ref, watchEffect } from 'vue'
-const tabs = [
+const tabs = ref([
   { id: 0, text: '登录' },
   { id: 1, text: '注册' }
-]
+])
 const username = ref('')
 const password = ref('')
 const fileList = ref<{ url: string }[]>([])
 const currentTab = ref(0)
+
+// 进行提交
+const onSubmit = () => {
+  if (currentTab.value === 0) {
+    store.actions.login(username.value, password.value)
+  }
+  if (currentTab.value === 1) {
+    store.actions.register
+  }
+}
 </script>
 <style lang="scss">
 @import '../style/index.scss';

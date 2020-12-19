@@ -1,10 +1,25 @@
+/*
+ * @Author: Mr.Mao
+ * @LastEditors: Mr.Mao
+ * @Date: 2020-12-07 09:02:16
+ * @LastEditTime: 2020-12-19 16:15:21
+ * @Description:
+ * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
+ */
 // 使用具体参考axios文档: https://www.kancloud.cn/yunye/axios/234845
 import { default as http } from 'axios'
+import { ERROR_STRATEGY, STRATEGY_KEYS } from './error.strategy'
+import { Toast } from 'vant'
+http.defaults.baseURL = '/api'
 
 /** 添加请求拦截器 */
 http.interceptors.request.use((config) => {
-  if (config.custom?.load) {
-    throw new Error('错误!, 加载并未实现!')
+  if (config.custom?.loading) {
+    Toast.loading({
+      duration: 0,
+      forbidClick: true,
+      message: '数据请求中...'
+    })
   }
   return config
 })
@@ -12,15 +27,12 @@ http.interceptors.request.use((config) => {
 /** 添加响应拦截器 */
 http.interceptors.response.use(
   (response) => {
-    if (response.config.custom?.load) {
-      throw new Error('错误!, 加载并未实现!')
-    }
+    response.config.custom?.loading && Toast.clear()
     return response
   },
   (error) => {
-    if (error.config.custom?.load) {
-      throw new Error('错误!, 加载并未实现!')
-    }
+    error.config.custom?.loading && Toast.clear()
+    ERROR_STRATEGY[error.response.status as STRATEGY_KEYS]?.(error)
     return Promise.reject(error)
   }
 )

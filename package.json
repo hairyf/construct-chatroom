@@ -7,6 +7,7 @@
     "serve": "nodemon server/app.ts"
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "secure-ls": "^1.2.6",
     "vant": "^3.0.0-rc.2",
     "vite": "^1.0.0-rc.13",
@@ -14,12 +15,14 @@
     "vue-router": "^4.0.0-rc.6"
   },
   "devDependencies": {
+    "@koa/multer": "^3.0.0",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa-graphql": "^0.8.4",
     "@types/koa-log4": "^2.3.2",
     "@types/koa-mount": "^4.0.0",
     "@types/koa-router": "^7.4.1",
+    "@types/koa__multer": "^2.0.2",
     "@types/md5": "^2.2.1",
     "@types/validator": "^13.1.1",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
@@ -28,7 +31,6 @@
     "@vue/compiler-sfc": "^3.0.4",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
-    "axios": "^0.21.0",
     "eslint": "^7.15.0",
     "eslint-plugin-prettier": "^3.2.0",
     "eslint-plugin-vue": "^7.2.0",
@@ -42,6 +44,7 @@
     "koa-router": "^10.0.0",
     "md5": "^2.3.0",
     "mongoose": "^5.11.4",
+    "multer": "^1.4.2",
     "nodemon": "^2.0.6",
     "prettier": "^2.2.1",
     "sass": "^1.30.0",
