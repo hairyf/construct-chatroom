@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 09:02:16
- * @LastEditTime: 2020-12-19 14:27:15
+ * @LastEditTime: 2020-12-20 00:38:14
  * @Description: 进行登录
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -15,7 +15,6 @@ import { http } from './http.config'
 
 // 暴露请求配置
 export const httpConfig = http.defaults
-
 // 进行登录
 export const reqLogin = (username?: string, password?: string) => {
   return http.post<UserInfo>(
@@ -24,8 +23,12 @@ export const reqLogin = (username?: string, password?: string) => {
     { custom: { loading: true } }
   )
 }
-
 // 进行注册
 export const reqRegister = (data: RegisterOpts) => {
   return http.post<UserInfo>('/user/register', data)
+}
+// 上传图片
+export const reqUploadImage = (formFile: FormData) => {
+  const headers = { 'Content-Type': 'multipart/form-data' }
+  return http.post<string>('common/upload_image', formFile, { headers })
 }

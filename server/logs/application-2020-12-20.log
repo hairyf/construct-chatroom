@@ -1,0 +1,101 @@
+[2020-12-20T00:10:28.601] [ERROR] application - ForbiddenError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-20T00:10:32.922] [ERROR] application - ForbiddenError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-20T00:11:39.919] [ERROR] application - BadRequestError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-20T00:11:43.760] [ERROR] application - BadRequestError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-20T00:12:11.434] [ERROR] application - BadRequestError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-20T00:12:53.170] [ERROR] application - BadRequestError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-20T00:13:17.167] [ERROR] application - BadRequestError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-20T00:13:52.673] [ERROR] application - BadRequestError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-20T00:13:57.194] [ERROR] application - BadRequestError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-20T00:14:03.567] [ERROR] application - BadRequestError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:42:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-20T00:37:59.519] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:23:22)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: 'Authentication Error'
+}

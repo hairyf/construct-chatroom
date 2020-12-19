@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-11-30 13:40:09
- * @LastEditTime: 2020-12-19 14:25:53
+ * @LastEditTime: 2020-12-20 00:13:47
  * @Description:
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -17,7 +17,7 @@ const loggerError = (errMsg: string, callback?: () => void) => {
 
 export const ERROR_STRATEGY = {
   /** 该请求参数不正确 */
-  400: (err: any) => loggerError(err.data?.msg ?? '请求错误'),
+  400: (err: any) => loggerError(err?.response?.data?.message ?? '请求错误'),
   /** 该请求需要用户登录 */
   401: (err: any) => {},
   /** 该请求未得到授权 */

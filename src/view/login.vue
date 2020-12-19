@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 23:50:38
- * @LastEditTime: 2020-12-19 13:47:11
+ * @LastEditTime: 2020-12-20 00:37:43
  * @Description: 登录页面
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
@@ -46,11 +46,13 @@
   <!-- 注册窗口 -->
   <main class="register-main" v-if="currentTab === 1">
     <van-uploader
+      multiple
+      :max-count="1"
+      :max-size="500 * 1024"
+      :after-read="onAfterRead"
       upload-text="上传头像"
       preview-size="6rem"
-      max-count="1"
       v-model="fileList"
-      image-fit
     />
     <van-cell-group>
       <van-field label-width="2rem" label="账号" placeholder="请输入账号" />
@@ -66,16 +68,35 @@
 <script setup lang="ts">
 import { store } from '../store'
 import { ref, watchEffect } from 'vue'
+import { reqUploadImage } from '../api'
+interface AfterReadEvent {
+  content: string
+  file: File
+  message: string
+  status: string
+}
+
+// 导航栏数据
+const currentTab = ref(0)
 const tabs = ref([
   { id: 0, text: '登录' },
   { id: 1, text: '注册' }
 ])
+// 表单数据
 const username = ref('')
 const password = ref('')
 const fileList = ref<{ url: string }[]>([])
-const currentTab = ref(0)
-
-// 进行提交
+watchEffect(() => {
+  console.log(fileList)
+})
+// 文件读取完成后上传图片
+const onAfterRead = async (event: AfterReadEvent) => {
+  const formFile = new FormData()
+  formFile.append('file', event.file)
+  const imageUrl = await reqUploadImage(formFile)
+  console.log(imageUrl)
+}
+// 进行提交(登录/注册)
 const onSubmit = () => {
   if (currentTab.value === 0) {
     store.actions.login(username.value, password.value)
@@ -130,6 +151,7 @@ header {
   align-items: center;
   .van-cell-group {
     width: 100%;
+    margin-top: px2rem(25);
   }
 }
 footer {
