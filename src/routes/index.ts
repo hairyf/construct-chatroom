@@ -2,22 +2,24 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-06 14:32:38
- * @LastEditTime: 2020-12-08 13:48:35
+ * @LastEditTime: 2020-12-21 00:17:27
  * @Description:
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
-  {
-    // 登录页面
-    path: '/login',
-    component: () => import('../view/login.vue')
-  },
+  { path: '/', redirect: '/login' },
   {
     // 主页
     path: '/home',
     component: () => import('../view/home.vue')
   },
+  {
+    // 登录页面
+    path: '/login',
+    component: () => import('../view/login.vue')
+  },
+
   {
     // 机器人回复
     path: '/robot',

@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 23:50:38
- * @LastEditTime: 2020-12-20 00:37:43
+ * @LastEditTime: 2020-12-21 00:18:58
  * @Description: 登录页面
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
@@ -31,13 +31,13 @@
     />
     <van-cell-group>
       <van-field
-        v-model="username"
+        v-model="form.username"
         input-align="center"
         placeholder="请输入用户名"
       />
       <van-field
         type="password"
-        v-model="password"
+        v-model="form.password"
         input-align="center"
         placeholder="请输入密码"
       />
@@ -50,15 +50,39 @@
       :max-count="1"
       :max-size="500 * 1024"
       :after-read="onAfterRead"
+      @delete="onDeleteFile"
       upload-text="上传头像"
       preview-size="6rem"
       v-model="fileList"
     />
     <van-cell-group>
-      <van-field label-width="2rem" label="账号" placeholder="请输入账号" />
-      <van-field label-width="2rem" label="密码" placeholder="请输入密码" />
+      <van-field
+        v-model="form.username"
+        label-width="2rem"
+        label="账号"
+        placeholder="请输入账号"
+      />
+      <van-field
+        v-model="form.password"
+        label-width="2rem"
+        label="密码"
+        placeholder="请输入密码"
+      />
+      <van-field
+        @click="showSeleteSex = true"
+        v-model="form.genderText"
+        label-width="2rem"
+        label="性别"
+        placeholder="请选择性别"
+        disabled
+      />
     </van-cell-group>
   </main>
+  <van-action-sheet
+    v-model:show="showSeleteSex"
+    :actions="selectSexActions"
+    @select="onSelectSex"
+  />
   <footer>
     <van-button class="submit-btns" type="primary" round @click="onSubmit">{{
       '进行' + tabs[currentTab].text
@@ -67,42 +91,57 @@
 </template>
 <script setup lang="ts">
 import { store } from '../store'
-import { ref, watchEffect } from 'vue'
-import { reqUploadImage } from '../api'
-interface AfterReadEvent {
-  content: string
-  file: File
-  message: string
-  status: string
-}
-
+import { reactive, ref, watch, watchEffect } from 'vue'
+import { onAfterRead, fileList, onDeleteFile } from '../hooks/useUploader'
+import { useRouter } from 'vue-router'
+import { Toast } from 'vant'
+const router = useRouter()
 // 导航栏数据
 const currentTab = ref(0)
 const tabs = ref([
   { id: 0, text: '登录' },
   { id: 1, text: '注册' }
 ])
+// 性别选择
+const showSeleteSex = ref(false)
+const selectSexActions = ref([
+  { id: 'women', name: '女孩子' },
+  { id: 'men', name: '男孩子' }
+])
 // 表单数据
-const username = ref('')
-const password = ref('')
-const fileList = ref<{ url: string }[]>([])
-watchEffect(() => {
-  console.log(fileList)
+const form = reactive({
+  avatar: '',
+  username: '',
+  password: '',
+  gender: '',
+  genderText: ''
 })
-// 文件读取完成后上传图片
-const onAfterRead = async (event: AfterReadEvent) => {
-  const formFile = new FormData()
-  formFile.append('file', event.file)
-  const imageUrl = await reqUploadImage(formFile)
-  console.log(imageUrl)
+
+// 选择性别
+const onSelectSex = (item: { id: string; name: string }) => {
+  form.gender = item.id
+  form.genderText = item.name
+  showSeleteSex.value = false
 }
+
+// 监视路径变化, 获取图片上传路径
+watchEffect(() => {
+  form.avatar = fileList.value[0]?.content ?? ''
+})
+// 如果已经登录, 则跳转至首页
+watchEffect(() => {
+  if (store.getters.isLogin.value) {
+    router.replace('/home')
+  }
+})
+
 // 进行提交(登录/注册)
 const onSubmit = () => {
   if (currentTab.value === 0) {
-    store.actions.login(username.value, password.value)
+    store.actions.login(form.username, form.password)
   }
   if (currentTab.value === 1) {
-    store.actions.register
+    store.actions.register(form)
   }
 }
 </script>
@@ -152,6 +191,9 @@ header {
   .van-cell-group {
     width: 100%;
     margin-top: px2rem(25);
+  }
+  .van-uploader__preview-image {
+    margin: 0 !important;
   }
 }
 footer {

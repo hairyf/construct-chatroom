@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-06 13:50:07
- * @LastEditTime: 2020-12-08 01:34:09
+ * @LastEditTime: 2020-12-21 00:16:52
  * @Description: 
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
@@ -36,10 +36,6 @@ const tabBarItems = ref([
   { icon: 'contact', label: '个人中心' }
 ])
 const currentTabBarIndex = ref(0)
-
-watchEffect(() => {
-  !isLogin.value && router.replace('/login')
-})
 </script>
 <style lang="scss">
 @import './style/class.scss';
