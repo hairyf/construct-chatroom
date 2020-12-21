@@ -2,13 +2,16 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-06 13:50:07
- * @LastEditTime: 2020-12-21 00:16:52
+ * @LastEditTime: 2020-12-21 10:45:59
  * @Description: 
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <router-view></router-view>
-  <van-tabbar v-model="currentTabBarIndex" v-if="isLogin">
+  <van-nav-bar :title="route.meta.title" />
+  <div class="router-content">
+    <router-view></router-view>
+  </div>
+  <van-tabbar v-model="currentTabBarIndex" v-if="route.path !== '/login'">
     <van-tabbar-item
       v-for="(item, index) in tabBarItems"
       :key="index"
@@ -16,26 +19,29 @@
       >{{ item.label }}</van-tabbar-item
     >
     <div
-      :style="{ left: currentTabBarIndex * 33.3333333333333333 + '%' }"
+      :style="{ left: currentTabBarIndex * (100 / 3) + '%' }"
       class="block"
     />
   </van-tabbar>
 </template>
 
 <script setup lang="ts">
-import { ref, watchEffect } from 'vue'
+import { ref, watch, watchEffect } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useStore } from './store'
 const store = useStore()
 const router = useRouter()
 const route = useRoute()
-const isLogin = store.getters.isLogin
+// 底部导航切换
 const tabBarItems = ref([
-  { icon: 'chat-o', label: '首页', path: '' },
-  { icon: 'friends-o', label: '联系人' },
-  { icon: 'contact', label: '个人中心' }
+  { icon: 'chat-o', label: '消息', path: '/home' },
+  { icon: 'friends-o', label: '联系人', path: '/contacts' },
+  { icon: 'contact', label: '个人中心', path: '/personal' }
 ])
 const currentTabBarIndex = ref(0)
+watch(currentTabBarIndex, (newVal) => {
+  router.replace(tabBarItems.value[newVal].path)
+})
 </script>
 <style lang="scss">
 @import './style/class.scss';

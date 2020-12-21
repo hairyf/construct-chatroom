@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-06 13:50:07
- * @LastEditTime: 2020-12-21 00:20:27
+ * @LastEditTime: 2020-12-21 14:37:29
  * @Description: 
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
@@ -13,7 +13,6 @@
 
 <script setup lang="ts">
 import { computed, ref, watchEffect, defineProps } from 'vue'
-
 /** 定义props */
 const props = defineProps({
   msg: String

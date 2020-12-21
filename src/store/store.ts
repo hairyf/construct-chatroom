@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 09:02:16
- * @LastEditTime: 2020-12-21 00:19:37
+ * @LastEditTime: 2020-12-21 09:29:18
  * @Description: 全局数据管理
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -34,9 +34,9 @@ const getters = {
 }
 
 // 用户数据持久化
-watch(state.userInfo, (newVal) => {
-  ls.set('__user__', newVal)
-  console.log('store-->watch', newVal)
+watch(state, () => {
+  ls.set('__user__', state.userInfo)
+  console.log('store-->watch', state.userInfo)
 })
 
 // 暴露储存库
