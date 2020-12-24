@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-10 23:14:01
- * @LastEditTime: 2020-12-19 17:26:32
+ * @LastEditTime: 2020-12-24 15:48:42
  * @Description: 群路由接口
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -19,9 +19,10 @@ group.post('/create', async (ctx) => {
 
 /** 群聊详情 */
 group.get('/detail', async (ctx) => {
-  const groupInfo: GroupModelType = (await GroupModel.findOne({
-    _id: ctx.request.body.id
-  })) as any
+  const groupInfo = await GroupModel.findOne({ _id: ctx.request.body.id })
+  if (!groupInfo) {
+    return ctx.throw(400, '未找到群聊')
+  }
   const user_ids = groupInfo.members.map((item) => ({ _id: item.user_id }))
   const members = (await UserModel.find({ $or: user_ids })) as any[]
   groupInfo.members = members

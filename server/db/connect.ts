@@ -2,11 +2,11 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 09:02:16
- * @LastEditTime: 2020-12-21 11:21:13
+ * @LastEditTime: 2020-12-24 15:30:06
  * @Description: 数据库连接
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
-import mongoose, { SchemaDefinition } from 'mongoose'
+import mongoose, { Document, SchemaDefinition } from 'mongoose'
 import { DATABASE_PATH } from '../config'
 mongoose.connect(DATABASE_PATH, {
   useNewUrlParser: true,
@@ -17,9 +17,11 @@ mongoose.connection.once('open', () =>
 )
 mongoose.connection.once('close', () => console.log('数据库连接失败!'))
 
-export const createModel = <T extends SchemaDefinition>(definition: T) => {
+export const createModel = <T extends Document>(
+  definition: SchemaDefinition
+) => {
   const schema = new mongoose.Schema(definition)
-  return (name: string) => mongoose.model(name, schema)
+  return (name: string) => mongoose.model<T>(name, schema)
 }
 
 export { mongoose }

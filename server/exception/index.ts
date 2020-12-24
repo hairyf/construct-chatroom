@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 16:08:22
- * @LastEditTime: 2020-12-19 21:21:39
+ * @LastEditTime: 2020-12-24 15:16:21
  * @Description: 处理错误信息
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -19,7 +19,10 @@ export default () => async (ctx: Ctx, next: Next) => {
       status: ctx.status,
       message: err.message || 'server Error'
     }
-    if (ctx.body.message === 'jwt expired') {
+    if (
+      ctx.body.message === 'jwt expired' ||
+      ctx.body.message === 'Authentication Error'
+    ) {
       ctx.body.status = 401
       ctx.body.message = '登录状态已过期'
     }
