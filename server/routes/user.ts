@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 14:39:50
- * @LastEditTime: 2020-12-24 18:20:47
+ * @LastEditTime: 2020-12-25 12:26:37
  * @Description: 用户路由接口
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -10,7 +10,7 @@ import Router from 'koa-router'
 import { Document } from 'mongoose'
 import jwt from 'jsonwebtoken'
 import md5 from 'md5'
-import { UserModel } from '../db'
+import { ContactModel, UserModel } from '../db'
 import { SECRET } from '../config'
 const user = new Router()
 
@@ -58,5 +58,38 @@ user.post('/login', async (ctx) => {
 })
 
 /** 进行查询多个用户 */
-user.get('/search', async (ctx) => {})
+user.get('/search', async (ctx) => {
+  const { search = '', page = 1, limit = 5 } = ctx.params
+  const users = await UserModel.find(
+    {
+      $or: [{ nickname: search }, { username: search }]
+    },
+    { skip: page, limit }
+  )
+  ctx.body = users
+})
+
+/** 进行添加好友 */
+user.post('/add_friend', async (ctx) => {
+  const uid = ctx.state.id
+  const fid = ctx.request.body?.id
+  // 判断是否已经是好友关系
+  const contactDocs = await ContactModel.find({
+    $or: [
+      { uid, fid },
+      { uid: fid, fid: uid }
+    ]
+  })
+  if (contactDocs.length == 2) {
+    ctx.throw(400, '当前已是好友关系')
+  }
+  // 判断是否已存在好友邀请
+  const contactDoc = await ContactModel.findOne({ uid, fid })
+  if (contactDoc) {
+    ctx.throw(400, '已存在好友邀请, 请耐心等待...')
+  }
+  ctx.body = await ContactModel.create({ uid, fid } as any)
+})
+/** 接受好友邀请 */
+// user.post('accept_')
 export default user

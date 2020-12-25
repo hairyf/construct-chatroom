@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-10 23:32:54
- * @LastEditTime: 2020-12-24 17:17:19
+ * @LastEditTime: 2020-12-25 11:28:36
  * @Description:
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -41,4 +41,8 @@ export interface ChatModelType extends BaseDb {
   read: boolean
   createtime: number
   readCount: number
+}
+export interface ContactModelType extends BaseDb {
+  uid: string
+  fid: string
 }

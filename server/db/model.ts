@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 09:02:16
- * @LastEditTime: 2020-12-24 17:37:11
+ * @LastEditTime: 2020-12-25 11:30:08
  * @Description: 多个数据库模块
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -29,7 +29,11 @@ export const UserModel = createModel<UserModelType>({
 })('user')
 
 /** 联系人表 */
-export const ContactModel = createModel<any>({})
+export const ContactModel = createModel({
+  uid: { type: String, required: true },
+  fid: { type: String, required: true },
+  createtime: { type: Date, default: Date.now }
+})('contact')
 
 /** 消息群表 */
 export const GroupModel = createModel<GroupModelType>({
@@ -43,7 +47,7 @@ export const GroupModel = createModel<GroupModelType>({
   members: {
     type: [
       {
-        user_id: { type: String, required: true },
+        uid: { type: String, required: true },
         createtime: { type: Date, default: Date.now }
       }
     ]
