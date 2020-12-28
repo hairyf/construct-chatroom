@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-19 17:15:14
- * @LastEditTime: 2020-12-19 23:39:55
+ * @LastEditTime: 2020-12-29 01:00:37
  * @Description: 共用请求模块
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -18,6 +18,10 @@ common.post('/upload_image', uploadImage.single('file'), (ctx) => {
 })
 
 /** 上传多文件 */
-common.post('/upload_images', uploadImage.array('files', 6), (ctx) => {})
+common.post('/upload_images', uploadImage.array('files', 6), (ctx) => {
+  ctx.body = ctx.files.map((file) => {
+    return `${BASE_URL}/public/${file.filename}`
+  })
+})
 
 export default common

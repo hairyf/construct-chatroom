@@ -1,0 +1,454 @@
+[2020-12-29T00:17:31.287] [ERROR] application - MongoError: Failed to parse: { find: "users", filter: { $or: [ { nickname: { $regex: /(?:)/i } }, { username: { $regex: /(?:)/i } } ] }, projection: {}, skip: "5", limit: "5", returnKey: false, showRecordId: false, lsid: { id: UUID("567b73b4-8baa-4bc6-9fb7-cdfca9734279") }, $db: "rt_im" }. 'skip' field must be numeric.
+    at MessageStream.messageHandler (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongodb\lib\cmap\connection.js:268:20)
+    at MessageStream.emit (events.js:210:5)
+    at MessageStream.EventEmitter.emit (domain.js:476:20)
+    at processIncomingData (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongodb\lib\cmap\message_stream.js:144:12)
+    at MessageStream._write (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongodb\lib\cmap\message_stream.js:42:5)
+    at doWrite (_stream_writable.js:431:12)
+    at writeOrBuffer (_stream_writable.js:415:5)
+    at MessageStream.Writable.write (_stream_writable.js:305:11)
+    at Socket.ondata (_stream_readable.js:726:22)
+    at Socket.emit (events.js:210:5)
+    at Socket.EventEmitter.emit (domain.js:476:20)
+    at addChunk (_stream_readable.js:308:12)
+    at readableAddChunk (_stream_readable.js:289:11)
+    at Socket.Readable.push (_stream_readable.js:223:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:182:23) {
+  ok: 0,
+  code: 9,
+  codeName: 'FailedToParse',
+  name: 'MongoError'
+}
+[2020-12-29T00:40:49.069] [ERROR] application - BadRequestError: 该用户已存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:21:32
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该用户已存在'
+}
+[2020-12-29T00:40:54.762] [ERROR] application - BadRequestError: 该用户已存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:21:32
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该用户已存在'
+}
+[2020-12-29T00:46:34.766] [ERROR] application - TokenExpiredError: jwt expired
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:94:10)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:36:23
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-router\lib\router.js:372:16
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:34:12
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-router\lib\router.js:377:31)
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:26:14
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  name: 'TokenExpiredError',
+  message: 'jwt expired',
+  expiredAt: 2020-12-24T06:42:05.000Z
+}
+[2020-12-29T00:46:36.987] [ERROR] application - BadRequestError: 该账号不存在
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:46:34
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '该账号不存在'
+}
+[2020-12-29T00:47:16.633] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:23:22)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: 'Authentication Error'
+}
+[2020-12-29T00:47:27.494] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:66:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Authentication Error',
+  originalError: JsonWebTokenError: jwt malformed
+      at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:63:17)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:5:23
+      at new Promise (<anonymous>)
+      at module.exports (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:4:12)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:64
+      at Array.map (<anonymous>)
+      at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:43)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+      at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+    name: 'JsonWebTokenError',
+    message: 'jwt malformed'
+  }
+}
+[2020-12-29T00:47:37.204] [ERROR] application - UnauthorizedError: Bad Authorization header format. Format is "Authorization: Bearer <token>"
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at resolveAuthorizationHeader (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\resolvers\auth-header.js:26:18)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:20:49
+    at Array.find (<anonymous>)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:20:24)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+    at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: 'Bad Authorization header format. Format is "Authorization: Bearer <token>"'
+}
+[2020-12-29T00:47:42.488] [ERROR] application - Error: contact validation failed: uid: Path `uid` is required., fid: Path `fid` is required.
+    at ValidationError.inspect (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\error\validation.js:47:26)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\layouts.js:69:12)
+    at app (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\appenders\dateFile.js:30:19)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:41:21)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:13)
+    at Object.send (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:78:7)
+    at Logger._log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:56:16)
+    at Logger.log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:45:12) {
+  errors: {
+    uid: ValidatorError: Path `uid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'uid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    fid: ValidatorError: Path `fid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'fid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'contact validation failed'
+}
+[2020-12-29T00:47:55.936] [ERROR] application - Error: contact validation failed: uid: Path `uid` is required., fid: Path `fid` is required.
+    at ValidationError.inspect (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\error\validation.js:47:26)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\layouts.js:69:12)
+    at app (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\appenders\dateFile.js:30:19)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:41:21)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:13)
+    at Object.send (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:78:7)
+    at Logger._log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:56:16)
+    at Logger.log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:45:12) {
+  errors: {
+    uid: ValidatorError: Path `uid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'uid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    fid: ValidatorError: Path `fid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'fid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'contact validation failed'
+}
+[2020-12-29T00:48:36.370] [ERROR] application - Error: contact validation failed: uid: Path `uid` is required., fid: Path `fid` is required.
+    at ValidationError.inspect (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\error\validation.js:47:26)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\layouts.js:69:12)
+    at app (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\appenders\dateFile.js:30:19)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:41:21)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:13)
+    at Object.send (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:78:7)
+    at Logger._log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:56:16)
+    at Logger.log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:45:12) {
+  errors: {
+    uid: ValidatorError: Path `uid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'uid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    fid: ValidatorError: Path `fid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'fid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'contact validation failed'
+}
+[2020-12-29T00:49:02.808] [ERROR] application - Error: contact validation failed: uid: Path `uid` is required., fid: Path `fid` is required.
+    at ValidationError.inspect (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\error\validation.js:47:26)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\layouts.js:69:12)
+    at app (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\appenders\dateFile.js:30:19)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:41:21)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:13)
+    at Object.send (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:78:7)
+    at Logger._log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:56:16)
+    at Logger.log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:45:12) {
+  errors: {
+    uid: ValidatorError: Path `uid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'uid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    fid: ValidatorError: Path `fid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'fid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'contact validation failed'
+}
+[2020-12-29T00:49:44.317] [ERROR] application - Error: contact validation failed: uid: Path `uid` is required., fid: Path `fid` is required.
+    at ValidationError.inspect (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\error\validation.js:47:26)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\layouts.js:69:12)
+    at app (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\appenders\dateFile.js:30:19)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:41:21)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:13)
+    at Object.send (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:78:7)
+    at Logger._log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:56:16)
+    at Logger.log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:45:12) {
+  errors: {
+    uid: ValidatorError: Path `uid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'uid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    },
+    fid: ValidatorError: Path `fid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'fid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'contact validation failed'
+}
+[2020-12-29T00:50:19.631] [ERROR] application - Error: contact validation failed: fid: Path `fid` is required.
+    at ValidationError.inspect (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\error\validation.js:47:26)
+    at formatValue (internal/util/inspect.js:563:31)
+    at inspect (internal/util/inspect.js:221:10)
+    at formatWithOptions (internal/util/inspect.js:1693:40)
+    at Object.format (internal/util/inspect.js:1543:10)
+    at basicLayout (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\layouts.js:69:12)
+    at app (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\appenders\dateFile.js:30:19)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:42:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\log4js.js:41:21)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:26
+    at Array.forEach (<anonymous>)
+    at sendToListeners (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:16:13)
+    at Object.send (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\clustering.js:78:7)
+    at Logger._log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:56:16)
+    at Logger.log (G:\项目文件\开源库管理\RT-IM-demo\node_modules\log4js\lib\logger.js:45:12) {
+  errors: {
+    fid: ValidatorError: Path `fid` is required.
+        at validate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1257:13)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1240:7
+        at Array.forEach (<anonymous>)
+        at SchemaString.SchemaType.doValidate (G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\schematype.js:1185:14)
+        at G:\项目文件\开源库管理\RT-IM-demo\node_modules\mongoose\lib\document.js:2501:18
+        at processTicksAndRejections (internal/process/task_queues.js:75:11) {
+      properties: [Object],
+      kind: 'required',
+      path: 'fid',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'contact validation failed'
+}
+[2020-12-29T00:51:18.351] [ERROR] application - BadRequestError: 已存在好友邀请, 请耐心等待...
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:88:14
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '已存在好友邀请, 请耐心等待...'
+}
+[2020-12-29T00:51:48.684] [ERROR] application - BadRequestError: 已存在好友邀请, 请耐心等待...
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:88:14
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '已存在好友邀请, 请耐心等待...'
+}
+[2020-12-29T00:52:25.692] [ERROR] application - BadRequestError: 已存在好友邀请, 请耐心等待...
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\routes\user.ts:88:14
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:26
+    at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:5)
+    at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+  message: '已存在好友邀请, 请耐心等待...'
+}
+[2020-12-29T00:57:51.178] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:66:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Authentication Error',
+  originalError: TokenExpiredError: jwt expired
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:152:21
+      at getSecret (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:90:14)
+      at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:94:10)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:5:23
+      at new Promise (<anonymous>)
+      at module.exports (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:4:12)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:64
+      at Array.map (<anonymous>)
+      at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:43)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+      at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+    name: 'TokenExpiredError',
+    message: 'jwt expired',
+    expiredAt: 2020-12-24T06:57:08.000Z
+  }
+}

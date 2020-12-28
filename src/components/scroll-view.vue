@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 23:50:38
- * @LastEditTime: 2020-12-21 18:18:48
+ * @LastEditTime: 2020-12-21 22:15:21
  * @Description: 首页
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
@@ -29,15 +29,15 @@
  * @evnet {Function} pullingUp(callback) 滚动到底部事件, 用于上拉加载, 需要释放事件
  * @evnet {Function} pullingDown(callback) 滚动到顶部下拉事件, 用于下拉刷新
  */
-import {
-  defineEmit,
-  onMounted,
-  ref,
-  defineProps,
-  computed,
-  nextTick
-} from 'vue'
+import { defineEmit, onMounted, ref, defineProps, computed } from 'vue'
 import BScroll from '@better-scroll/core'
+import PullDown from '@better-scroll/pull-down'
+import Pullup from '@better-scroll/pull-up'
+// 扩展下拉刷新的能力
+BScroll.use(PullDown)
+// 扩展上拉加载的能力
+BScroll.use(Pullup)
+
 const props = defineProps({
   // 滑动块高度(默认页面高度)
   height: {
@@ -73,6 +73,11 @@ const props = defineProps({
   pullDownRefreshTopHeight: {
     type: Number,
     default: 40
+  },
+  // scroll 配置
+  options: {
+    type: Object,
+    default: {}
   }
 })
 const emit = defineEmit()
@@ -102,6 +107,7 @@ const isShowPullUpload = computed(() => {
 const isShowPullUpEnd = computed(() => {
   return props.pullUpLoad && props.pullUpLoadEnd
 })
+let scroll = null as null | InstanceType<typeof BScroll>
 
 // 是否展示底部
 onMounted(() => {
@@ -113,16 +119,17 @@ onMounted(() => {
   const pullDownRefreshOpts = props.pullDownRefresh && {
     stop: props.pullDownRefreshTopHeight
   }
-  const scroll = new BScroll(scrollEl, {
+  scroll = new BScroll(scrollEl, {
     pullDownRefresh: pullDownRefreshOpts as any,
-    pullUpLoad: props.pullUpLoad as any
+    pullUpLoad: props.pullUpLoad as any,
+    ...props.options
   })
   // 派发滚动到底部事件, 用于上拉加载
   props.pullUpLoad &&
     scroll.on('pullingUp', () => {
       isPullUpload.value = true
       emit('pullup', () => {
-        scroll.finishPullUp()
+        scroll?.finishPullUp()
         isPullUpload.value = false
       })
     })
@@ -131,7 +138,7 @@ onMounted(() => {
     scroll.on('pullingDown', () => {
       isPullDownLoad.value = true
       emit('pulldown', () => {
-        scroll.finishPullDown()
+        scroll?.finishPullDown()
         isPullDownLoad.value = false
       })
     })

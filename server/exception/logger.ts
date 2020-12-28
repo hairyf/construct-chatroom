@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 16:37:22
- * @LastEditTime: 2020-12-07 17:00:33
+ * @LastEditTime: 2020-12-28 20:11:04
  * @Description: 错误处理
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -38,6 +38,7 @@ log4js.configure({
     application: { appenders: ['application'], level: 'WARN' }
   }
 })
+
 // 记录所有访问级别的日志
 export const accessLogger = log4js.koaLogger(log4js.getLogger('access'))
 // 记录所有应用级别的日志

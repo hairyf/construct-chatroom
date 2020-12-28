@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 09:02:16
- * @LastEditTime: 2020-12-25 11:30:08
+ * @LastEditTime: 2020-12-29 00:42:22
  * @Description: 多个数据库模块
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -68,6 +68,8 @@ export const ChatModel = createModel<ChatModelType>({
   to: { type: String, required: true },
   // from 和 to 组成的聊天标识
   chat_id: { type: String, required: true },
+  // 聊天记录表
+  image: { type: String, required: true },
   // 一条消息的内容
   content: { type: String, required: true },
   // 标识是否已读(只有接受者才需要的数据)

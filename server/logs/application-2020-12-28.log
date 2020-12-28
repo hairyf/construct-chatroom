@@ -1,0 +1,168 @@
+[2020-12-28T20:31:22.771] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:66:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Authentication Error',
+  originalError: JsonWebTokenError: jwt malformed
+      at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:63:17)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:5:23
+      at new Promise (<anonymous>)
+      at module.exports (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:4:12)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:64
+      at Array.map (<anonymous>)
+      at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:43)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+      at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+    name: 'JsonWebTokenError',
+    message: 'jwt malformed'
+  }
+}
+[2020-12-28T20:31:58.230] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:66:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Authentication Error',
+  originalError: JsonWebTokenError: jwt malformed
+      at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:63:17)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:5:23
+      at new Promise (<anonymous>)
+      at module.exports (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:4:12)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:64
+      at Array.map (<anonymous>)
+      at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:43)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+      at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+    name: 'JsonWebTokenError',
+    message: 'jwt malformed'
+  }
+}
+[2020-12-28T20:32:22.981] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:66:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Authentication Error',
+  originalError: JsonWebTokenError: jwt malformed
+      at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:63:17)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:5:23
+      at new Promise (<anonymous>)
+      at module.exports (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:4:12)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:64
+      at Array.map (<anonymous>)
+      at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:43)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+      at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+    name: 'JsonWebTokenError',
+    message: 'jwt malformed'
+  }
+}
+[2020-12-28T20:32:53.999] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:66:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Authentication Error',
+  originalError: JsonWebTokenError: jwt malformed
+      at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:63:17)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:5:23
+      at new Promise (<anonymous>)
+      at module.exports (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:4:12)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:64
+      at Array.map (<anonymous>)
+      at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:43)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+      at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+    name: 'JsonWebTokenError',
+    message: 'jwt malformed'
+  }
+}
+[2020-12-28T20:33:23.047] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:66:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Authentication Error',
+  originalError: JsonWebTokenError: jwt malformed
+      at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:63:17)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:5:23
+      at new Promise (<anonymous>)
+      at module.exports (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:4:12)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:64
+      at Array.map (<anonymous>)
+      at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:43)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+      at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+    name: 'JsonWebTokenError',
+    message: 'jwt malformed'
+  }
+}
+[2020-12-28T20:35:22.763] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:66:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Authentication Error',
+  originalError: JsonWebTokenError: jwt malformed
+      at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:63:17)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:5:23
+      at new Promise (<anonymous>)
+      at module.exports (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:4:12)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:64
+      at Array.map (<anonymous>)
+      at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:43)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+      at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+    name: 'JsonWebTokenError',
+    message: 'jwt malformed'
+  }
+}
+[2020-12-28T20:35:34.818] [ERROR] application - UnauthorizedError: Authentication Error
+    at Object.throw (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa\lib\context.js:97:11)
+    at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:66:26)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  message: 'Authentication Error',
+  originalError: JsonWebTokenError: jwt malformed
+      at Object.module.exports [as verify] (G:\项目文件\开源库管理\RT-IM-demo\node_modules\jsonwebtoken\verify.js:63:17)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:5:23
+      at new Promise (<anonymous>)
+      at module.exports (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\verify.js:4:12)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:64
+      at Array.map (<anonymous>)
+      at jwt (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-jwt\lib\index.js:38:43)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-unless\index.js:29:12
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-mount\index.js:52:32
+      at dispatch (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-compose\index.js:42:32)
+      at bodyParser (G:\项目文件\开源库管理\RT-IM-demo\node_modules\koa-bodyparser\index.js:95:11)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+      at G:\项目文件\开源库管理\RT-IM-demo\server\exception\index.ts:15:5 {
+    name: 'JsonWebTokenError',
+    message: 'jwt malformed'
+  }
+}

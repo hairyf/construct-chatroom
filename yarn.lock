@@ -3993,14 +3993,6 @@ koa-send@^5.0.0, koa-send@^5.0.1:
     http-errors "^1.7.3"
     resolve-path "^1.4.0"
 
-koa-socket-2@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/koa-socket-2/download/koa-socket-2-2.0.0.tgz#c782a599813352b5d5827e535c71bb7e527d1e14"
-  integrity sha1-x4KlmYEzUrXVgn5TXHG7flJ9HhQ=
-  dependencies:
-    koa-compose "^4.1.0"
-    socket.io "^3.0.2"
-
 koa-static@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npm.taobao.org/koa-static/download/koa-static-5.0.0.tgz#5e92fc96b537ad5219f425319c95b64772776943"
@@ -5969,7 +5961,7 @@ socket.io-parser@~4.0.1:
     component-emitter "~1.3.0"
     debug "~4.1.0"
 
-socket.io@^3.0.2, socket.io@^3.0.4:
+socket.io@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npm.taobao.org/socket.io/download/socket.io-3.0.4.tgz?cache=0&sync_timestamp=1607339058226&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsocket.io%2Fdownload%2Fsocket.io-3.0.4.tgz#20130a80b57e48dadb671f22e3776047cc7f9d53"
   integrity sha1-IBMKgLV+SNrbZx8i43dgR8x/nVM=
