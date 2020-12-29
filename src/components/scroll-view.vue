@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 23:50:38
- * @LastEditTime: 2020-12-21 22:15:21
+ * @LastEditTime: 2020-12-29 11:12:55
  * @Description: 首页
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
@@ -156,5 +156,6 @@ onMounted(() => {
   position: absolute;
   overflow: hidden;
   transform: translateY(-100%) translateZ(0);
+  width: 100%;
 }
 </style>

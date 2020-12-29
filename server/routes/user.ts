@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-07 14:39:50
- * @LastEditTime: 2020-12-29 00:54:34
+ * @LastEditTime: 2020-12-29 09:06:26
  * @Description: 用户路由接口
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -89,18 +89,23 @@ user.post('/add_friend', async (ctx) => {
   ctx.body = await ContactModel.create({ uid, fid } as any)
 })
 /** 接受好友邀请 */
-user.post('accept_friend', async (ctx) => {
+user.post('/accept_friend', async (ctx) => {
   const uid = ctx.state.user._id
   const fid = ctx.request.body.id
-  // 判断是否已经接受好友
-  const contactDoc = await ContactModel.findOne({ uid, fid })
-  if (contactDoc) {
+  // 判断是否已经是好友关系
+  const contactDocs = await ContactModel.find({
+    $or: [
+      { uid, fid },
+      { uid: fid, fid: uid }
+    ]
+  })
+  if (contactDocs.length == 2) {
     ctx.throw(400, '当前已是好友关系')
   }
   // 创建联系人
   ctx.body = await ContactModel.create({
-    uid: fid,
-    fid: uid
+    uid,
+    fid
   } as any)
 })
 

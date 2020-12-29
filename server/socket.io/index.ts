@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2020-12-22 10:21:53
- * @LastEditTime: 2020-12-24 17:19:09
+ * @LastEditTime: 2020-12-29 10:45:30
  * @Description: socket.io 入口文件
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
@@ -13,7 +13,6 @@ import { SECRET } from '../config'
 import { ChatModel, UserModel } from '../db'
 // 消息队列
 const socketQueues: Record<string, SocketIO.Namespace> = {}
-
 // 监听单连接事件
 const socketEventMonitor = (socket: SocketIO.Namespace) => {
   socket.on('client-login', (userid) => (socketQueues[userid] = socket))
@@ -37,7 +36,6 @@ const socketEventMonitor = (socket: SocketIO.Namespace) => {
     socketQueues[params.to].emit('server-send', chatDoc)
   })
 }
-
 // 引入并连接 socket
 export const useSocket = (server: Server) => {
   const io = new SocketIO.Server(server)
