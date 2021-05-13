@@ -1,0 +1,19 @@
+[2021-05-12T23:26:13.372] [ERROR] application - ForbiddenError: 不够权限
+    at Object.throw (G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa\lib\context.js:97:11)
+    at G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\routes\user.ts:6:12
+    at dispatch (G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa-router\lib\router.js:372:16
+    at dispatch (G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa-compose\index.js:34:12
+    at dispatch (G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa-router\lib\router.js:377:31)
+    at dispatch (G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\exception\index.ts:15:11
+    at dispatch (G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa-compose\index.js:42:32)
+    at G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa-compose\index.js:34:12
+    at Application.handleRequest (G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa\lib\application.js:168:12)
+    at Server.handleRequest (G:\项目文件\开源库管理\construct-chatroom\construct-chatroom-admin\node_modules\koa\lib\application.js:150:19)
+    at Server.emit (events.js:210:5)
+    at Server.EventEmitter.emit (domain.js:476:20)
+    at parserOnIncoming (_http_server.js:745:12) {
+  message: '不够权限'
+}

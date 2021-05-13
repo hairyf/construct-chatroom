@@ -1,0 +1,45 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Mr\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add eslint@typescript-eslint/eslint-plugin @typescript-eslint/parser @vue/cli-plugin-eslint @vue/eslint-config-prettier @vue/eslint-config-typescript eslint-plugin-prettier eslint-plugin-vue eslint-config-craftsman
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\TortoiseSVN\bin;C:\Users\Mr\AppData\Local\Microsoft\WindowsApps;C:\Users\Mr\AppData\Roaming\npm;C:\Users\Mr\AppData\Local\GitHubDesktop\bin;F:\Longtion\software\phpstudy_pro\Extensions\php\php7.3.4nts;C:\Program Files\Java\jdk1.8.0_261\bin;F:\flutter\bin;F:\softs\Microsoft VS Code\bin;C:\Users\Mr\.deno\bin;C:\Users\Mr\AppData\Local\Yarn\bin;
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect ETIMEDOUT 52.74.223.119:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1128:14)
+
+npm manifest: 
+  {
+    "name": "vite-project",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "vue-tsc --noEmit && vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "vue": "^3.0.5"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-vue": "^1.2.2",
+      "@vue/compiler-sfc": "^3.0.5",
+      "typescript": "^4.1.3",
+      "vite": "^2.3.0",
+      "vue-tsc": "^0.0.24"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

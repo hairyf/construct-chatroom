@@ -1,8 +1,0 @@
-{
-  "px2rem": {
-    "body": "px2rem($1)",
-    "prefix": "px2rem ",
-    "scope": "scss",
-    "description": "px to rem"
-  },
-}
